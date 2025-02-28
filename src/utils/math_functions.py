@@ -1,5 +1,5 @@
 # MATH FUNCTIONS
 
-def add(firstnum: int | float, secondnum: int | float) -> int | float:
+def add(first_num: int | float, second_num: int | float) -> int | float:
     return firstnum + secondnum
 
