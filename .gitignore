@@ -1,1 +1,6 @@
-.mypy_cache/
+src/.mypy_cache/
+src/.ruff_cache/
+src/utils/.ruff_cache/
+src/utils/.mypy_cache/
+src/ui_python/.ruff_cache/
+src/ui_python/.mypy_cache/
