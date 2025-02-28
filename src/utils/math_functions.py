@@ -19,3 +19,10 @@ def divide(this_num: int | float, by_num: int | float) -> int | float:
         return round((this_num / by_num), 5)
     # integer division
     return this_num // by_num
+
+
+def invert_sign(number: int | float) -> int | float:
+    return -(number)
+
+
+# eosc
