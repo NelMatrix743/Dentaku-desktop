@@ -7,7 +7,7 @@ class MainScreen(QMainWindow):
 
     def __init__(self) -> Self:
         super().__init__()
-        loadUi("ui_xml/main_screen.ui", self)
+        loadUi("uixml/main_screen.ui", self)
 
 
     def launch(self) -> None:
