@@ -49,8 +49,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>30</pointsize>
+      <family>SF Pro Rounded</family>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -75,10 +75,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -101,10 +101,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -127,10 +127,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>SF Pro Rounded</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -139,7 +139,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>AC</string>
+     <string>÷</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_8">
@@ -153,10 +153,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -165,7 +165,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>9</string>
+     <string>7</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_9">
@@ -179,10 +179,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -191,7 +191,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>6</string>
+     <string>4</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_10">
@@ -205,10 +205,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -217,7 +217,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>3</string>
+     <string>1</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_11">
@@ -243,7 +243,17 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>S</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloaded images/Icons/Plus-Minus Icons/iconizer-plus-minus_3.png</normaloff>../../../../../Downloaded images/Icons/Plus-Minus Icons/iconizer-plus-minus_3.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>50</width>
+      <height>50</height>
+     </size>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_12">
@@ -257,10 +267,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -283,10 +293,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -295,7 +305,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>7</string>
+     <string>9</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_14">
@@ -309,10 +319,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -335,10 +345,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -347,7 +357,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>4</string>
+     <string>6</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_16">
@@ -361,10 +371,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -387,10 +397,11 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -399,7 +410,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>1</string>
+     <string>3</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_18">
@@ -413,10 +424,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -439,10 +450,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
+      <family>SF Pro Rounded</family>
       <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -465,10 +476,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>SF Pro Rounded</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -491,10 +502,10 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>30</pointsize>
-      <weight>75</weight>
-      <bold>true</bold>
+      <family>SF Pro Rounded</family>
+      <pointsize>40</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
      </font>
     </property>
     <property name="styleSheet">
@@ -517,8 +528,8 @@ border-radius: 10px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Consolas</family>
-      <pointsize>30</pointsize>
+      <family>SF Pro Rounded</family>
+      <pointsize>45</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -529,7 +540,7 @@ color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>AC</string>
+     <string>=</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_23">
@@ -550,25 +561,50 @@ border-radius: 10px;</string>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #1A1A1A;
+     <string notr="true">background-color: transparent;
 color: #FFFFFF;
 border-radius: 10px;</string>
     </property>
     <property name="text">
-     <string>X</string>
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../../../../Downloaded images/Icons/BackSpace Icons/iconizer-backspace_0.png</normaloff>../../../../../Downloaded images/Icons/BackSpace Icons/iconizer-backspace_0.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>40</width>
+      <height>40</height>
+     </size>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>200</y>
-      <width>321</width>
-      <height>21</height>
+      <y>190</y>
+      <width>331</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI Historic</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: grey; 
+padding-right: 10;</string>
+    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -580,8 +616,34 @@ border-radius: 10px;</string>
       <height>161</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <family>SF Pro Rounded</family>
+      <pointsize>60</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: white;</string>
+    </property>
     <property name="text">
-     <string>TextLabel</string>
+     <string>0</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>0</number>
     </property>
    </widget>
    <widget class="QWidget" name="widget" native="true">
