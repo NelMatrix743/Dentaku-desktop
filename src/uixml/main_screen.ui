@@ -699,7 +699,7 @@ QPushButton:pressed{
      </size>
     </property>
    </widget>
-   <widget class="QLabel" name="res_screen">
+   <widget class="CalculatorScreen" name="res_screen">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -727,7 +727,7 @@ padding-right: 10;</string>
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="expr_screen">
+   <widget class="CalculatorScreen" name="expr_screen">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -782,6 +782,13 @@ border-radius: 3px;</string>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CalculatorScreen</class>
+   <extends>QLabel</extends>
+   <header>uipython/calculator_screen.h</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>
