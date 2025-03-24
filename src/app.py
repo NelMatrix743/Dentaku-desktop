@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QLineEdit
+from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 from uipython.calculator_screen import CalculatorScreen
 from PyQt5.uic import loadUi
 from typing import Self
