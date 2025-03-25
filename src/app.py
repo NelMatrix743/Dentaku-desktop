@@ -9,10 +9,10 @@ class MainScreen(QMainWindow):
     def __init__(self) -> Self:
         super().__init__()
         loadUi("uixml/main_screen.ui", self)
-        self.init_ui_components()
+        self.setup_ui_components()
 
 
-    def init_ui_components(self) -> None:
+    def setup_ui_components(self) -> None:
         # calculator screens
         self.main_screen: CalculatorScreen = self.findChild(CalculatorScreen, "expr_screen")
         self.result_screen: CalculatorScreen = self.findChild(CalculatorScreen, "res_screen")
@@ -42,6 +42,9 @@ class MainScreen(QMainWindow):
         self.eight_button: QPushButton = self.findChild(QPushButton, "button_8")
         self.nine_button: QPushButton = self.findChild(QPushButton, "button_p")
         self.dot_button: QPushButton = self.findChild(QPushButton, "button_dot")
+
+        # map buttons to functions
+        
 
 
     def launch(self) -> None:
