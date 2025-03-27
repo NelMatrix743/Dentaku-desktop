@@ -23,4 +23,10 @@ def insert_digit(digit: str, screen: CalculatorScreen) -> None:
         screen.clear()
     screen.setText(content + digit)
 
+def insert_decimal_point(screen: CalculatorScreen) -> None:
+    pass
+
+def insert_operator(operator: str, screen: CalculatorScreen) -> None:
+    pass
+
 # eosc
