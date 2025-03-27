@@ -21,7 +21,7 @@ def clear_last_input(screen: CalculatorScreen) -> None:
 def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if content == DEFAULT_VALUE:
-        return
+        content = ''
     screen.setText(content + digit)
 
 def insert_decimal_point(screen: CalculatorScreen) -> None:
