@@ -18,8 +18,9 @@ def clear_last_input(screen: CalculatorScreen) -> None:
     screen.setText(content)
 
 def insert_digit(digit: str, screen: CalculatorScreen) -> None:
-    if screen.text().startswith("0"):
+    content: str = screen.text()
+    if content.startswith("0"):
         screen.clear()
-    screen.setText(screen.text() + digit)
+    screen.setText(content + digit)
 
 # eosc
