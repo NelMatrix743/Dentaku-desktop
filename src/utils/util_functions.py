@@ -24,7 +24,10 @@ def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     screen.setText(content + digit)
 
 def insert_decimal_point(screen: CalculatorScreen) -> None:
-    pass
+    content: str = screen.text()
+    if '.' in content:
+        return
+    screen.setText(content + '.')
 
 def insert_operator(operator: str, screen: CalculatorScreen) -> None:
     pass
