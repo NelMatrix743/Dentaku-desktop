@@ -1,9 +1,10 @@
 from PyQt5.QtWidgets import QLabel
 from uipython.calculator_screen import CalculatorScreen
 
+DEFAULT_VALUE: str = '0'
 
 def reset(screen: CalculatorScreen) -> None:
-    screen.setText('0')
+    screen.setText(DEFAULT_VALUE)
 
 def clear_screen(screen: CalculatorScreen) -> None:
     screen.clear()
@@ -19,8 +20,8 @@ def clear_last_input(screen: CalculatorScreen) -> None:
 
 def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
-    if content.startswith("0"):
-        screen.clear()
+    if content == DEFAULT_VALUE:
+        return
     screen.setText(content + digit)
 
 def insert_decimal_point(screen: CalculatorScreen) -> None:
