@@ -31,6 +31,9 @@ def insert_decimal_point(screen: CalculatorScreen) -> None:
     screen.setText(content + '.')
 
 def insert_operator(operator: str, screen: CalculatorScreen) -> None:
-    pass
+    content: str = screen.text()
+    if not content[-1].isdigit() and content[-1] != "%":
+        return
+    screen.setText(f"{content} {operator} ")
 
 # eosc
