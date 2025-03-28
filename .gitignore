@@ -6,3 +6,4 @@ src/ui_python/.ruff_cache/
 src/ui_python/.mypy_cache/
 src/__pycache__/
 src/uipython/__pycache__/
+src/utils/__pycache__/
