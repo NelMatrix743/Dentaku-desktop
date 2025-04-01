@@ -28,6 +28,9 @@ def clear_last_input(screen: CalculatorScreen) -> None:
     else: # digit
         clear_digit(screen)
 
+def insert_value(value: str, screen: CalculatorScreen) -> None:
+    pass
+
 def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if content == DEFAULT_VALUE:
@@ -45,5 +48,7 @@ def insert_operator(operator: str, screen: CalculatorScreen) -> None:
     if not content[-1].isdigit() and content[-1] != "%":
         return
     screen.setText(f"{content} {operator} ")
+
+
 
 # eosc
