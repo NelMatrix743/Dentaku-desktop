@@ -79,7 +79,6 @@ class MainScreen(QMainWindow):
         self.mapfunction(self.seven_button, insert_digit, "7")
         self.mapfunction(self.eight_button, insert_digit, "8")
         self.mapfunction(self.nine_button, insert_digit, "9")
-        self.mapfunction(self.zero_button, insert_digit, "0")
 
         self.mapfunction(self.dot_button, insert_decimal_point)
         self.mapfunction(self.clear_button, clear_last_input)
