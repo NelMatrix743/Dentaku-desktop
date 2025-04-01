@@ -7,11 +7,12 @@ from functools import partial
 from PyQt5.uic import loadUi
 from typing import Self
 from utils.util_functions import (
-    insert_digit,
     clear_last_input,
     clear_screen,
-    insert_decimal_point,
-    insert_operator
+    insert_digit,
+    insert_optr,
+    insert_dcp,
+    insert_percent
 )
 from utils.assets import APP_NAME, APP_ICON
 
@@ -80,14 +81,15 @@ class MainScreen(QMainWindow):
         self.mapfunction(self.eight_button, insert_digit, "8")
         self.mapfunction(self.nine_button, insert_digit, "9")
 
-        self.mapfunction(self.dot_button, insert_decimal_point)
+        self.mapfunction(self.dot_button, insert_dcp)
+        self.mapfunction(self.percentage_button, insert_percent)
         self.mapfunction(self.clear_button, clear_last_input)
         self.mapfunction(self.all_clear_button, clear_screen)
 
-        self.mapfunction(self.addition_button, insert_operator, "+")
-        self.mapfunction(self.multiplication_button, insert_operator, '×')
-        self.mapfunction(self.subtraction_button, insert_operator, "-")
-        self.mapfunction(self.division_button, insert_operator, '÷')
+        self.mapfunction(self.addition_button, insert_optr, "+")
+        self.mapfunction(self.multiplication_button, insert_optr, '×')
+        self.mapfunction(self.subtraction_button, insert_optr, "-")
+        self.mapfunction(self.division_button, insert_optr, '÷')
 
 
     def launch(self) -> None:
