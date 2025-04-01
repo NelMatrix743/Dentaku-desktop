@@ -1,6 +1,8 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
 from uipython.calculator_screen import CalculatorScreen
 from  collections.abc import Callable
+from PyQt5.QtGui import QIcon
+from PyQt5.QtCore import QDir
 from functools import partial
 from PyQt5.uic import loadUi
 from typing import Self
@@ -11,6 +13,7 @@ from utils.util_functions import (
     insert_decimal_point,
     insert_operator
 )
+from utils.assets import APP_NAME, APP_ICON
 
 
 class MainScreen(QMainWindow):
@@ -18,6 +21,8 @@ class MainScreen(QMainWindow):
     def __init__(self) -> Self:
         super().__init__()
         loadUi("uixml/main_screen.ui", self)
+        self.setWindowTitle(APP_NAME)
+        self.setWindowIcon(QIcon(APP_ICON)) 
         self.setup_ui_components()
 
 
