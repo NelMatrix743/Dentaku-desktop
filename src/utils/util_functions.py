@@ -23,14 +23,10 @@ def clear_operator(screen: CalculatorScreen) -> None:
 
 def clear_last_input(screen: CalculatorScreen) -> None:
     content: str = screen.text()
-    if content[-1] == ' ':
-        pass
-    else:
-        content = content[0:len(content)-1]
-    if not len(content):
-        reset(screen)
-        return
-    screen.setText(content)
+    if content.endswith(' '): # operator
+        clear_operator(screen)
+    else: # digit
+        clear_digit(screen)
 
 def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
