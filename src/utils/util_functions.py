@@ -11,10 +11,15 @@ def clear_screen(screen: CalculatorScreen) -> None:
     reset(screen)
 
 def clear_digit(screen: CalculatorScreen) -> None:
-    pass
+    content: str = screen.text()[:-1]
+    if content:
+        screen.setText(content)
+    else:
+        reset(screen)
 
 def clear_operator(screen: CalculatorScreen) -> None:
-    pass
+    content: str = screen.text()[:-3]
+    screen.setText(content)
 
 def clear_last_input(screen: CalculatorScreen) -> None:
     content: str = screen.text()
