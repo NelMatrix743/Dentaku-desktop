@@ -10,9 +10,18 @@ def clear_screen(screen: CalculatorScreen) -> None:
     screen.clear()
     reset(screen)
 
+def clear_digit(screen: CalculatorScreen) -> None:
+    pass
+
+def clear_operator(screen: CalculatorScreen) -> None:
+    pass
+
 def clear_last_input(screen: CalculatorScreen) -> None:
     content: str = screen.text()
-    content = content[0:len(content)-1]
+    if content[-1] == ' ':
+        pass
+    else:
+        content = content[0:len(content)-1]
     if not len(content):
         reset(screen)
         return
