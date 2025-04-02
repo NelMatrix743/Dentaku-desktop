@@ -1,5 +1,7 @@
 from PyQt5.QtWidgets import QLabel
 from uipython.calculator_screen import CalculatorScreen
+import re
+
 
 DEFAULT_VALUE: str = '0'
 OPERATORS: list[str] = ['+', '-', '×', '÷']
@@ -39,7 +41,7 @@ def is_percent(value: str) -> bool:
 def is_decimal_point(value: str) -> bool:
     return value == '.'
 
-def insert_digit(digit: str, screen: CalculatorScreen) -> str:
+def insert_digit(digit: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if content == DEFAULT_VALUE:
         content = digit
@@ -49,7 +51,7 @@ def insert_digit(digit: str, screen: CalculatorScreen) -> str:
         content = content + digit
     screen.setText(content)
 
-def insert_optr(operator: str, screen: CalculatorScreen) -> str:
+def insert_optr(operator: str, screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if not content[-1].isdigit() and not is_percent(content[-1]):
         pass
@@ -57,17 +59,20 @@ def insert_optr(operator: str, screen: CalculatorScreen) -> str:
         content = f"{content} {operator} "
     screen.setText(content)
 
-def insert_dcp(screen: CalculatorScreen) -> str:
+def insert_dcp(screen: CalculatorScreen) -> None:
     content: str = screen.text()
-    if ('.' in content) or (not content[-1].isdigit()):
-        pass
+    # Split expression at operators (+, , -, ×, ÷)
+    terms: list[str] = re.split(r' \+ | - | \* | / ', content)
+    last_term: str = terms[-1]
+    if not last_term.isdigit():
+        return
     else:
         content = content + '.'
     screen.setText(content)
 
-def insert_percent(screen: CalculatorScreen) -> str:
+def insert_percent(screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if content[-1].isdigit():
         screen.setText(content + '%')
-
+ 
 # eosc
