@@ -74,5 +74,8 @@ def insert_percent(screen: CalculatorScreen) -> None:
     content: str = screen.text()
     if content[-1].isdigit():
         screen.setText(content + '%')
- 
+
+def negate_value(screen: CalculatorScreen) -> None:
+    pass
+
 # eosc
