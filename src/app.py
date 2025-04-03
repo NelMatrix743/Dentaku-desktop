@@ -12,7 +12,8 @@ from utils.util_functions import (
     insert_digit,
     insert_optr,
     insert_dcp,
-    insert_percent
+    insert_percent,
+    negate_value
 )
 from utils.assets import APP_NAME, APP_ICON
 
@@ -90,6 +91,8 @@ class MainScreen(QMainWindow):
         self.mapfunction(self.multiplication_button, insert_optr, '×')
         self.mapfunction(self.subtraction_button, insert_optr, "-")
         self.mapfunction(self.division_button, insert_optr, '÷')
+
+        self.mapfunction(self.plus_minus_button, negate_value)
 
 
     def launch(self) -> None:
