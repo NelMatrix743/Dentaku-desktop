@@ -31,6 +31,15 @@
     <height>758</height>
    </size>
   </property>
+  <property name="font">
+   <font>
+    <family>SF Pro Rounded</family>
+    <pointsize>20</pointsize>
+   </font>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
   <property name="windowTitle">
    <string>DENTAKU</string>
   </property>
@@ -699,7 +708,7 @@ QPushButton:pressed{
      </size>
     </property>
    </widget>
-   <widget class="CalculatorScreen" name="res_screen">
+   <widget class="ResultScreen" name="res_screen">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -727,48 +736,6 @@ padding-right: 10;</string>
      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="CalculatorScreen" name="expr_screen">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>371</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>SF Pro Rounded</family>
-      <pointsize>60</pointsize>
-      <weight>50</weight>
-      <bold>false</bold>
-      <underline>false</underline>
-      <strikeout>false</strikeout>
-      <kerning>true</kerning>
-     </font>
-    </property>
-    <property name="layoutDirection">
-     <enum>Qt::LeftToRight</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: white;</string>
-    </property>
-    <property name="text">
-     <string>0</string>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::AutoText</enum>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-    </property>
-    <property name="wordWrap">
-     <bool>true</bool>
-    </property>
-    <property name="margin">
-     <number>0</number>
-    </property>
-   </widget>
    <widget class="QWidget" name="widget" native="true">
     <property name="geometry">
      <rect>
@@ -783,13 +750,51 @@ padding-right: 10;</string>
 border-radius: 3px;</string>
     </property>
    </widget>
+   <widget class="MainScreen" name="main_screen">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>381</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>SF Pro Rounded</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPlainTextEdit {
+	color: white;
+	border: none;
+	font-family: &quot;SF Pro Rounded&quot;;
+	font-size: 80px;
+}</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="plainText">
+     <string>0</string>
+    </property>
+    <property name="placeholderText">
+     <string>0</string>
+    </property>
+   </widget>
   </widget>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>CalculatorScreen</class>
+   <class>MainScreen</class>
+   <extends>QPlainTextEdit</extends>
+   <header>uipython/main_screen.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ResultScreen</class>
    <extends>QLabel</extends>
-   <header>uipython/calculator_screen.h</header>
+   <header>uipython/result_screen.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
