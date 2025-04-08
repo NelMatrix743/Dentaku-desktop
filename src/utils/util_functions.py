@@ -1,5 +1,6 @@
 from PyQt5.QtWidgets import QLabel
-from uipython.calculator_screen import CalculatorScreen
+from uipython.main_screen import MainScreen
+from uipython.result_screen import ResultScreen
 import re
 
 
@@ -7,25 +8,25 @@ DEFAULT_VALUE: str = '0'
 OPERATORS: list[str] = ['+', '-', '×', '÷']
 
 
-def reset(screen: CalculatorScreen) -> None:
+def reset(screen: MainScreen | ResultScreen) -> None:
     screen.setText(DEFAULT_VALUE)
 
-def clear_screen(screen: CalculatorScreen) -> None:
+def clear_screen(screen: MainScreen | ResultScreen) -> None:
     screen.clear()
     reset(screen)
 
-def clear_digit(screen: CalculatorScreen) -> None:
+def clear_digit(screen: MainScreen) -> None:
     content: str = screen.text()[:-1]
     if content:
         screen.setText(content)
     else:
         reset(screen)
 
-def clear_operator(screen: CalculatorScreen) -> None:
+def clear_operator(screen: MainScreen) -> None:
     content: str = screen.text()[:-3]
     screen.setText(content)
 
-def clear_last_input(screen: CalculatorScreen) -> None:
+def clear_last_input(screen: MainScreen) -> None:
     content: str = screen.text()
     if content.endswith(' '): # operator
         clear_operator(screen)
@@ -41,7 +42,7 @@ def is_percent(value: str) -> bool:
 def is_decimal_point(value: str) -> bool:
     return value == '.'
 
-def insert_digit(digit: str, screen: CalculatorScreen) -> None:
+def insert_digit(digit: str, screen: MainScreen) -> None:
     content: str = screen.text()
     if content == DEFAULT_VALUE:
         content = digit
@@ -51,7 +52,7 @@ def insert_digit(digit: str, screen: CalculatorScreen) -> None:
         content = content + digit
     screen.setText(content)
 
-def insert_optr(operator: str, screen: CalculatorScreen) -> None:
+def insert_optr(operator: str, screen: MainScreen) -> None:
     content: str = screen.text()
     if not content[-1].isdigit() and not is_percent(content[-1]):
         pass
@@ -59,7 +60,7 @@ def insert_optr(operator: str, screen: CalculatorScreen) -> None:
         content = f"{content} {operator} "
     screen.setText(content)
 
-def insert_dcp(screen: CalculatorScreen) -> None:
+def insert_dcp(screen: MainScreen) -> None:
     content: str = screen.text()
     # Split expression at operators (+, , -, ×, ÷)
     terms: list[str] = re.split(r' \+ | - | \* | / ', content)
@@ -70,12 +71,12 @@ def insert_dcp(screen: CalculatorScreen) -> None:
         content = content + '.'
     screen.setText(content)
 
-def insert_percent(screen: CalculatorScreen) -> None:
+def insert_percent(screen: MainScreen) -> None:
     content: str = screen.text()
     if content[-1].isdigit():
         screen.setText(content + '%')
 
-def negate_value(screen: CalculatorScreen) -> None:
+def negate_value(screen: MainScreen) -> None:
     content: str = screen.text()
     try:
         content = f"{-(int(content))}"
