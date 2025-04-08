@@ -1,9 +1,8 @@
 from PyQt5.QtWidgets import QLabel
 from PyQt5.QtCore import pyqtSignal
-from PyQt6.QtGui import QFontMetrics, QFont
 
 
-class CalculatorScreen(QLabel):
+class ResultrScreen(QLabel):
 # custom QLabel to handle text changes from math expressions and results
 
     textChanged = pyqtSignal(str)
@@ -11,6 +10,7 @@ class CalculatorScreen(QLabel):
     def __init__(self, text):
         super().__init__(text)
         self.setWordWrap(True)
+        self.setScaledContents(True)
         self.setSizePolicy(self.sizePolicy().Preferred, self.sizePolicy().Minimum)
         self.adjustSize()
 
