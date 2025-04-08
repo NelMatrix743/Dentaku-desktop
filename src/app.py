@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QPushButton
-from uipython.calculator_screen import CalculatorScreen
-from  collections.abc import Callable
+from uipython.main_screen import MainScreen
+from uipython.result_screen import ResultScreen
+from collections.abc import Callable
 from PyQt5.QtGui import QIcon
 from PyQt5.QtCore import QDir
 from functools import partial
@@ -41,8 +42,8 @@ class MainScreen(QMainWindow):
 
     def setup_ui_components(self) -> None:
         # calculator screens
-        self.main_screen: CalculatorScreen = self.mapwidget("expr_screen", CalculatorScreen)
-        self.result_screen: CalculatorScreen = self.mapwidget("res_screen", CalculatorScreen)
+        self.main_screen: MainScreen = self.mapwidget("expr_screen", MainScreen)
+        self.result_screen: ResultScreen = self.mapwidget("res_screen", ResultScreen)
 
         # function buttons
         self.clear_button: QPushButton = self.mapwidget("button_clr")
