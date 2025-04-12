@@ -750,7 +750,7 @@ padding-right: 10;</string>
 border-radius: 3px;</string>
     </property>
    </widget>
-   <widget class="MainScreen" name="main_screen">
+   <widget class="MainScreen" name="expr_screen">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -767,11 +767,16 @@ border-radius: 3px;</string>
     </property>
     <property name="styleSheet">
      <string notr="true">QPlainTextEdit {
-	color: white;
-	border: none;
-	font-family: &quot;SF Pro Rounded&quot;;
-	font-size: 80px;
-}</string>
+                color: white;
+                border: none;
+                font-family: &quot;SF Pro Rounded&quot;;
+                font-size: 80px;
+ }
+QScrollBar:vertical {
+                border: none;
+                background: #3D3D3D;
+                width: 8px;
+ }</string>
     </property>
     <property name="readOnly">
      <bool>true</bool>

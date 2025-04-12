@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QLabel
 from PyQt5.QtCore import pyqtSignal
 
 
-class ResultrScreen(QLabel):
+class ResultScreen(QLabel):
 # custom QLabel to handle text changes from math expressions and results
 
     textChanged = pyqtSignal(str)

@@ -19,7 +19,7 @@ from utils.util_functions import (
 from utils.assets import APP_NAME, APP_ICON
 
 
-class MainScreen(QMainWindow):
+class DentakuMain(QMainWindow):
 
     def __init__(self) -> Self:
         super().__init__()
@@ -29,8 +29,8 @@ class MainScreen(QMainWindow):
         self.setup_ui_components()
 
 
-    def mapwidget(self, name: str, widget_type=QPushButton) -> any:
-        return self.findChild(widget_type, name)
+    def mapwidget(self, name: str, w_type=QPushButton) -> any:
+        return self.findChild(w_type, name)
 
 
     def mapfunction(self, button: QPushButton, func: Callable, val=None) -> None:
@@ -42,8 +42,8 @@ class MainScreen(QMainWindow):
 
     def setup_ui_components(self) -> None:
         # calculator screens
-        self.main_screen: MainScreen = self.mapwidget("expr_screen", MainScreen)
-        self.result_screen: ResultScreen = self.mapwidget("res_screen", ResultScreen)
+        self.main_screen: MainScreen = self.mapwidget("expr_screen", w_type=MainScreen)
+        self.result_screen: ResultScreen = self.mapwidget("res_screen", w_type=ResultScreen)
 
         # function buttons
         self.clear_button: QPushButton = self.mapwidget("button_clr")
@@ -72,26 +72,26 @@ class MainScreen(QMainWindow):
         self.dot_button: QPushButton = self.mapwidget("button_dot")
 
         # map buttons to functions
-        self.mapfunction(self.zero_button, insert_digit, "0")
-        self.mapfunction(self.one_button, insert_digit, "1")
-        self.mapfunction(self.two_button, insert_digit, "2")
-        self.mapfunction(self.three_button, insert_digit, "3")
-        self.mapfunction(self.four_button, insert_digit, "4")
-        self.mapfunction(self.five_button, insert_digit, "5")
-        self.mapfunction(self.six_button, insert_digit, "6")
-        self.mapfunction(self.seven_button, insert_digit, "7")
-        self.mapfunction(self.eight_button, insert_digit, "8")
-        self.mapfunction(self.nine_button, insert_digit, "9")
+        self.mapfunction(self.zero_button, insert_digit, val="0")
+        self.mapfunction(self.one_button, insert_digit, val="1")
+        self.mapfunction(self.two_button, insert_digit, val="2")
+        self.mapfunction(self.three_button, insert_digit, val="3")
+        self.mapfunction(self.four_button, insert_digit, val="4")
+        self.mapfunction(self.five_button, insert_digit, val="5")
+        self.mapfunction(self.six_button, insert_digit, val="6")
+        self.mapfunction(self.seven_button, insert_digit, val="7")
+        self.mapfunction(self.eight_button, insert_digit, val="8")
+        self.mapfunction(self.nine_button, insert_digit, val="9")
 
         self.mapfunction(self.dot_button, insert_dcp)
         self.mapfunction(self.percentage_button, insert_percent)
         self.mapfunction(self.clear_button, clear_last_input)
         self.mapfunction(self.all_clear_button, clear_screen)
 
-        self.mapfunction(self.addition_button, insert_optr, "+")
-        self.mapfunction(self.multiplication_button, insert_optr, '×')
-        self.mapfunction(self.subtraction_button, insert_optr, "-")
-        self.mapfunction(self.division_button, insert_optr, '÷')
+        self.mapfunction(self.addition_button, insert_optr, val="+")
+        self.mapfunction(self.multiplication_button, insert_optr, val='×')
+        self.mapfunction(self.subtraction_button, insert_optr, val="-")
+        self.mapfunction(self.division_button, insert_optr, val='÷')
 
         self.mapfunction(self.plus_minus_button, negate_value)
 
@@ -103,7 +103,7 @@ class MainScreen(QMainWindow):
 if __name__ == "__main__":
 
     app: QApplication = QApplication([])
-    main: MainScreen = MainScreen()
+    main: DentakuMain = DentakuMain()
     main.launch()
     app.exec_()
 
