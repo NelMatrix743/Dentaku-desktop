@@ -3,10 +3,9 @@ from uipython.main_screen import MainScreen
 from uipython.result_screen import ResultScreen
 from collections.abc import Callable
 from PyQt5.QtGui import QIcon
-from PyQt5.QtCore import QDir
 from functools import partial
 from PyQt5.uic import loadUi
-from typing import Self
+from typing import Any
 from utils.util_functions import (
     clear_last_input,
     clear_screen,
@@ -21,19 +20,19 @@ from utils.assets import APP_NAME, APP_ICON
 
 class DentakuMain(QMainWindow):
 
-    def __init__(self) -> Self:
+    def __init__(self) -> None:
         super().__init__()
-        loadUi("uixml/main_screen.ui", self)
+        loadUi("src/uixml/main_screen.ui", self)
         self.setWindowTitle(APP_NAME)
         self.setWindowIcon(QIcon(APP_ICON)) 
         self.setup_ui_components()
 
 
-    def mapwidget(self, name: str, w_type=QPushButton) -> any:
+    def mapwidget(self, name: str, w_type: type = QPushButton) -> Any:
         return self.findChild(w_type, name)
 
 
-    def mapfunction(self, button: QPushButton, func: Callable, val=None) -> None:
+    def mapfunction(self, button: QPushButton, func: Callable, val: str = None) -> None:
         if not val:
             button.clicked.connect(partial(func, self.main_screen))
             return
