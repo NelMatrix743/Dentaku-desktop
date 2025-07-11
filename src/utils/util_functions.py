@@ -1,11 +1,8 @@
 from PyQt5.QtWidgets import QLabel
 from uipython.main_screen import MainScreen
 from uipython.result_screen import ResultScreen
+from utils.assets import DEFAULT_VALUE, OPERATORS
 import re
-
-
-DEFAULT_VALUE: str = '0'
-OPERATORS: list[str] = ['+', '-', '×', '÷']
 
 
 def reset(screen: MainScreen | ResultScreen) -> None:
