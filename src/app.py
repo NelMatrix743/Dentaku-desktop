@@ -13,7 +13,8 @@ from utils.util_functions import (
     insert_optr,
     insert_dcp,
     insert_percent,
-    negate_value
+    negate_value,
+    evaluate_expression
 )
 from utils.assets import APP_NAME, APP_ICON
 
@@ -93,6 +94,8 @@ class DentakuMain(QMainWindow):
         self.mapfunction(self.division_button, insert_optr, val='÷')
 
         self.mapfunction(self.plus_minus_button, negate_value)
+
+        self.equals_button.clicked.connect(partial(evaluate_expression, self.main_screen, self.result_screen))
 
 
     def launch(self) -> None:

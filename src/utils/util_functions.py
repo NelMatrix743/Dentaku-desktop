@@ -1,7 +1,7 @@
-from PyQt5.QtWidgets import QLabel
 from uipython.main_screen import MainScreen
 from uipython.result_screen import ResultScreen
 from utils.assets import DEFAULT_VALUE, OPERATORS
+import tinypost as tp
 import re
 
 
@@ -80,5 +80,21 @@ def negate_value(screen: MainScreen) -> None:
         screen.setText(content)
     except ValueError:
         pass
+
+def evaluate_expression(in_screen: MainScreen, out_screen: ResultScreen) -> None:
+    if out_screen.text() != "0":
+        in_screen.setText(out_screen.text())
+        reset(out_screen)
+        return
+    expr: str = in_screen.parcelable_expr
+    if expr.isdigit():
+        return
+    if '%' in expr:
+        expr = expr.replace('%', ' / 100')
+    result: float | int = tp.eval_expr(expr)
+    if result % 1 == 0.0:
+        result = int(result)
+    out_screen.setText(str(result))
+
 
 # eosc
