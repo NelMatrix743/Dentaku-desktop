@@ -8,7 +8,7 @@ from PyQt5.uic import loadUi
 from typing import Any
 from utils.util_functions import (
     clear_last_input,
-    clear_screen,
+    clear_screens,
     insert_digit,
     insert_optr,
     insert_dcp,
@@ -23,7 +23,7 @@ class DentakuMain(QMainWindow):
 
     def __init__(self) -> None:
         super().__init__()
-        loadUi("src/uixml/main_screen.ui", self)
+        loadUi("uixml/main_screen.ui", self)
         self.setWindowTitle(APP_NAME)
         self.setWindowIcon(QIcon(APP_ICON)) 
         self.setup_ui_components()
@@ -86,7 +86,6 @@ class DentakuMain(QMainWindow):
         self.mapfunction(self.dot_button, insert_dcp)
         self.mapfunction(self.percentage_button, insert_percent)
         self.mapfunction(self.clear_button, clear_last_input)
-        self.mapfunction(self.all_clear_button, clear_screen)
 
         self.mapfunction(self.addition_button, insert_optr, val="+")
         self.mapfunction(self.multiplication_button, insert_optr, val='×')
@@ -96,6 +95,7 @@ class DentakuMain(QMainWindow):
         self.mapfunction(self.plus_minus_button, negate_value)
 
         self.equals_button.clicked.connect(partial(evaluate_expression, self.main_screen, self.result_screen))
+        self.all_clear_button.clicked.connect(partial(clear_screens, self.main_screen, self.result_screen))
 
 
     def launch(self) -> None:

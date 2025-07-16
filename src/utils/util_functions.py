@@ -8,9 +8,9 @@ import re
 def reset(screen: MainScreen | ResultScreen) -> None:
     screen.setText(DEFAULT_VALUE)
 
-def clear_screen(screen: MainScreen | ResultScreen) -> None:
-    screen.clear()
-    reset(screen)
+def clear_screens(main_scr: MainScreen, res_scr: ResultScreen) -> None:
+    main_scr.clear(); res_scr.clear()
+    reset(main_scr); reset(res_scr)
 
 def clear_digit(screen: MainScreen) -> None:
     content: str = screen.text()[:-1]
