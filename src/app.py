@@ -72,6 +72,7 @@ class DentakuMain(QMainWindow):
         self.dot_button: QPushButton = self.mapwidget("button_dot")
 
         # map buttons to functions
+        #digits
         self.mapfunction(self.zero_button, insert_digit, val="0")
         self.mapfunction(self.one_button, insert_digit, val="1")
         self.mapfunction(self.two_button, insert_digit, val="2")
@@ -83,19 +84,39 @@ class DentakuMain(QMainWindow):
         self.mapfunction(self.eight_button, insert_digit, val="8")
         self.mapfunction(self.nine_button, insert_digit, val="9")
 
+        # primary operators
         self.mapfunction(self.dot_button, insert_dcp)
         self.mapfunction(self.percentage_button, insert_percent)
-        self.mapfunction(self.clear_button, clear_last_input)
 
+        # secondary operators
         self.mapfunction(self.addition_button, insert_optr, val="+")
         self.mapfunction(self.multiplication_button, insert_optr, val='×')
         self.mapfunction(self.subtraction_button, insert_optr, val="-")
         self.mapfunction(self.division_button, insert_optr, val='÷')
-
         self.mapfunction(self.plus_minus_button, negate_value)
+        self.equals_button.clicked.connect(
+            partial(
+                evaluate_expression, 
+                self.main_screen, 
+                self.result_screen
+            )
+        )
 
-        self.equals_button.clicked.connect(partial(evaluate_expression, self.main_screen, self.result_screen))
-        self.all_clear_button.clicked.connect(partial(clear_screens, self.main_screen, self.result_screen))
+        # special operators
+        self.clear_button.clicked.connect(
+            partial(
+                clear_last_input,
+                self.main_screen,
+                self.result_screen
+            )
+        )
+        self.all_clear_button.clicked.connect(
+            partial(
+                clear_screens, 
+                self.main_screen, 
+                self.result_screen
+            )
+        )
 
 
     def launch(self) -> None:

@@ -23,12 +23,13 @@ def clear_operator(screen: MainScreen) -> None:
     content: str = screen.text()[:-3]
     screen.setText(content)
 
-def clear_last_input(screen: MainScreen) -> None:
-    content: str = screen.text()
+def clear_last_input(main_screen: MainScreen, res_scr: ResultScreen) -> None:
+    content: str = main_screen.text()
     if content.endswith(' '): # operator
-        clear_operator(screen)
+        clear_operator(main_screen)
     else: # digit
-        clear_digit(screen)
+        clear_digit(main_screen)
+    reset(res_scr)
 
 def is_operator(value: str) -> bool:
     return value in OPERATORS
